@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BookAdminSite.master.cs" Inherits="图书管理系统.BookAdminSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>无标题页</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            height: 181px;
+        }
+        .style3
+        {
+            width: 650px;
+            height: 341px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div>
+        <table cellspacing="0" cellpadding="0" align="center" border="0" style="width: 910px;
+            height: 594px;">
+            <tbody>
+                <tr>
+                    <td class="style2">
+                        <img src="图片/shouye.jpg" border="0" style="height: 179px; width: 983px"> </img>
+                    </td>
+                </tr>
+                <tr>
+                    <td background="图片/shouye-2.jpg" style="vertical-align: top; " class="style3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="图片/login_3.jpg" border="0" style="width: 982px; margin-top: 3px"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

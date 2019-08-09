@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSite.master.cs"
+    Inherits="图书管理系统.AdminSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>无标题页</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 212px;
+        }
+    </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table cellspacing="0" cellpadding="0" align="center" border="0" style="width: 910px;
+            height: 594px;">
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <img src="图片/shouye.jpg" border="0" style="height: 174px; width: 983px"> </img>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:TreeView ID="TreeView1" runat="server" ShowLines="true"
+                             DataSourceID="SiteMapDataSource1" Height="389px" 
+                            Width="268px" BackColor="#0096FF" BorderColor="White" ForeColor="White">
+                            <DataBindings>
+                                <asp:TreeNodeBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="title" Target="_self"
+                                     ToolTipField="description" />
+                            </DataBindings>
+                        </asp:TreeView>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    </td>
+                    <td style="vertical-align: top; width:650px;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <img src="图片/login_3.jpg" border="0" style="width: 982px; margin-top: 3px"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
